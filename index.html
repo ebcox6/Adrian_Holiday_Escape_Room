@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Math Escape Room</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffefba, #ffffff);
+            font-family: 'Comic Sans MS', 'Chalkboard', cursive;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #d32f2f;
+            font-size: 2.5em;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 1.2em;
+            margin: 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #ffcccb;
+            transform: scale(1.1);
+        }
+        .red-button {
+            background-color: #f44336;
+            color: white;
+        }
+        .green-button {
+            background-color: #4caf50;
+            color: white;
+        }
+        .yellow-button {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+        .blue-button {
+            background-color: #2196f3;
+            color: white;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.3em;
+        }
+    </style>
+    <script>
+        function revealContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Holiday Math Escape Room</h1>
+
+    <div class="button-container">
+        <button class="button blue-button" onclick="window.open('https://drive.google.com/file/d/14XqKHRWopvyr47LCGJoBcCnf5lwhWKzO/view?usp=sharing', '_blank')">Slides</button>
+        <button class="button green-button" onclick="window.open('https://docs.google.com/document/d/1cJoJssqE0xwd7xk6f-NoKLh18xIC0jr9v-60NPKetB0/edit?usp=drive_link', '_blank')">Entry Document</button>
+    </div>
+
+    <div class="button-container">
+        <button class="button red-button" onclick="revealContent('red-path')">Candy Cane Path</button>
+        <button class="button green-button" onclick="revealContent('green-path')">Evergreen Path</button>
+        <button class="button yellow-button" onclick="revealContent('yellow-path')">Golden Bells Path</button>
+        <button class="button blue-button" onclick="revealContent('blue-path')">Snowflake Path</button>
+    </div>
+
+    <div id="red-path" class="hidden-content">
+        The candy canes need to be placed on the holiday tree. Figure out how many candy canes are left in the box! Your first task is to solve: 5(x - 1) = 20
+    </div>
+
+    <div id="green-path" class="hidden-content">
+        The evergreen trees need more lights! Figure out how many more strings of lights are needed to make the tree shine. Your first task is to solve: 3(x + 1) = 18
+    </div>
+
+    <div id="yellow-path" class="hidden-content">
+        The golden bells need to be polished, but some are missing! Figure out how many more bells are needed. Your first task is to solve: 4(x - 2) = 16
+    </div>
+
+    <div id="blue-path" class="hidden-content">
+        The snowflakes are melting quickly! You need to figure out how many more snowflakes are needed to keep the winter wonderland complete. Your first task is to solve: 2(x + 5) = 30
+    </div>
+</body>
+</html>
